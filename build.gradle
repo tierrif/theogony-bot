@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.0.0'
+}
+
+group 'io.github.hotlava03'
+version '1.0.0'
+mainClassName = 'io.github.hotlava03.theogonybot.TheogonyBot'
+compileJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation('net.dv8tion:JDA:4.1.1_105')
+    implementation('club.minnced:jda-reactor:1.0.0')
+    implementation('org.slf4j:slf4j-simple:1.7.25')
+    implementation('com.google.code.gson:gson:2.8.6')
+    implementation('org.codehaus.groovy:groovy-jsr223:3.0.0-beta-1')
+    implementation fileTree(dir: 'lib', include: '*.jar')
+}
